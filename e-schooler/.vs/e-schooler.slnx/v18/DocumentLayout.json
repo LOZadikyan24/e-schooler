@@ -1,0 +1,51 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\poka\\source\\repos\\e-schooler\\e-schooler\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AC3B3C8D-736F-42C6-9B5F-A776F7426644}|e-schooler\\e-schooler.vcxproj|C:\\Users\\poka\\source\\repos\\e-schooler\\e-schooler\\e-schooler\\e-schooler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AC3B3C8D-736F-42C6-9B5F-A776F7426644}|e-schooler\\e-schooler.vcxproj|solutionrelative:e-schooler\\e-schooler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "e-schooler.cpp",
+              "DocumentMoniker": "C:\\Users\\poka\\source\\repos\\e-schooler\\e-schooler\\e-schooler\\e-schooler.cpp",
+              "RelativeDocumentMoniker": "e-schooler\\e-schooler.cpp",
+              "ToolTip": "C:\\Users\\poka\\source\\repos\\e-schooler\\e-schooler\\e-schooler\\e-schooler.cpp*",
+              "RelativeToolTip": "e-schooler\\e-schooler.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-09T19:03:17.586Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
