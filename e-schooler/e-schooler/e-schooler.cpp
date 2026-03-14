@@ -9,6 +9,12 @@ void clearScreen() {
 #endif
 }
 
+void pressEnter() {
+    cout << "\n  Press ENTER to continue...";
+    cin.ignore();
+    cin.get();
+}
+
 string green(string t) { return "\033[32m" + t + "\033[0m"; }
 string yellow(string t) { return "\033[33m" + t + "\033[0m"; }
 string red(string t) { return "\033[31m" + t + "\033[0m"; }
@@ -22,6 +28,35 @@ void banner() {
         "  |               Mathematics - Grade 9                 |\n"
         "  +------------------------------------------------------+\n"
     )) << "\n";
+}
+
+void lesson1() {
+    clearScreen(); banner();
+    cout << bold(yellow("\n  === LESSON 1 - What is a Quadratic Equation? ===\n\n"));
+    cout <<
+        "  A quadratic equation looks like this:\n"
+        "\n"
+        "        ax^2 + bx + c = 0\n"
+        "\n"
+        "  where a, b, c are numbers and a cannot be zero.\n"
+        "\n"
+        "  - a is the number in front of x^2\n"
+        "  - b is the number in front of x\n"
+        "  - c is just a plain number\n"
+        "\n"
+        "  Examples:\n"
+        "    x^2 - 5x + 6 = 0      (a=1, b=-5, c=6)\n"
+        "    2x^2 + 3x - 2 = 0     (a=2, b=3,  c=-2)\n"
+        "    x^2 - 9 = 0           (a=1, b=0,  c=-9)\n"
+        "\n"
+        "  THE DISCRIMINANT\n"
+        "  ----------------\n"
+        "  D = b^2 - 4ac\n"
+        "\n";
+    cout << green("    D > 0  -->  two different solutions\n");
+    cout << yellow("    D = 0  -->  exactly one solution\n");
+    cout << red("    D < 0  -->  no real solutions\n");
+    pressEnter();
 }
 
 int main() {
@@ -51,7 +86,7 @@ int main() {
         cin >> c;
 
         switch (c) {
-        case 1: break;
+        case 1: lesson1(); break;
         case 2: break;
         case 3: break;
         case 4: break;
