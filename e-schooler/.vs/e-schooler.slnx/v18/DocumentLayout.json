@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\poka\\source\\repos\\e-schooler\\e-schooler\\",
+  "WorkspaceRootPath": "C:\\Users\\poka\\Desktop\\project\\e-schooler\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC3B3C8D-736F-42C6-9B5F-A776F7426644}|e-schooler\\e-schooler.vcxproj|C:\\Users\\poka\\source\\repos\\e-schooler\\e-schooler\\e-schooler\\e-schooler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AC3B3C8D-736F-42C6-9B5F-A776F7426644}|e-schooler\\e-schooler.vcxproj|solutionrelative:e-schooler\\e-schooler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\poka\\Desktop\\project\\e-schooler\\e-schooler\\e-schooler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:e-schooler\\e-schooler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\poka\\Desktop\\project\\e-schooler\\e-schooler\\e-schooler.vcxproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:e-schooler\\e-schooler.vcxproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,13 +28,26 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "e-schooler.cpp",
-              "DocumentMoniker": "C:\\Users\\poka\\source\\repos\\e-schooler\\e-schooler\\e-schooler\\e-schooler.cpp",
+              "DocumentMoniker": "C:\\Users\\poka\\Desktop\\project\\e-schooler\\e-schooler\\e-schooler.cpp",
               "RelativeDocumentMoniker": "e-schooler\\e-schooler.cpp",
-              "ToolTip": "C:\\Users\\poka\\source\\repos\\e-schooler\\e-schooler\\e-schooler\\e-schooler.cpp*",
-              "RelativeToolTip": "e-schooler\\e-schooler.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\poka\\Desktop\\project\\e-schooler\\e-schooler\\e-schooler.cpp",
+              "RelativeToolTip": "e-schooler\\e-schooler.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-03-09T19:03:17.586Z",
+              "WhenOpened": "2026-03-14T08:53:01.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "e-schooler.vcxproj",
+              "DocumentMoniker": "C:\\Users\\poka\\Desktop\\project\\e-schooler\\e-schooler\\e-schooler.vcxproj",
+              "RelativeDocumentMoniker": "e-schooler\\e-schooler.vcxproj",
+              "ToolTip": "C:\\Users\\poka\\Desktop\\project\\e-schooler\\e-schooler\\e-schooler.vcxproj",
+              "RelativeToolTip": "e-schooler\\e-schooler.vcxproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000698|",
+              "WhenOpened": "2026-03-14T08:53:00.648Z",
               "EditorCaption": ""
             }
           ]

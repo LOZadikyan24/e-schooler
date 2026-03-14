@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\e-schooler"
+    "\\e-schooler",
+    "\\e-schooler\\e-schooler"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\e-schooler\\e-schooler.slnx",
   "PreviewInSolutionExplorer": false
 }
