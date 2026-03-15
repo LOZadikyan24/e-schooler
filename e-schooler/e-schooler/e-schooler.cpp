@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 void clearScreen() {
@@ -59,6 +60,42 @@ void lesson1() {
     pressEnter();
 }
 
+void lesson2() {
+    clearScreen(); banner();
+    cout << bold(yellow("\n  === LESSON 2 - How to Solve Quadratic Equations ===\n\n"));
+    cout <<
+        "  METHOD 1: Factoring\n"
+        "  -------------------\n"
+        "  Find two numbers that multiply to c and add to b.\n"
+        "\n"
+        "  Example: x^2 - 5x + 6 = 0\n"
+        "    Numbers that multiply to 6 and add to -5: -2 and -3\n"
+        "    (x - 2)(x - 3) = 0\n"
+        "    Answer: x = 2  or  x = 3\n"
+        "\n"
+        "  METHOD 2: Square Root\n"
+        "  ---------------------\n"
+        "  Use when there is no x term (b = 0).\n"
+        "\n"
+        "  Example: x^2 - 16 = 0\n"
+        "    x^2 = 16\n"
+        "    Answer: x = 4  or  x = -4\n"
+        "\n"
+        "  METHOD 3: Quadratic Formula\n"
+        "  ---------------------------\n"
+        "  Works for any quadratic equation.\n"
+        "\n"
+        "           -b +/- sqrt(b^2 - 4ac)\n"
+        "    x =   -------------------------\n"
+        "                    2a\n"
+        "\n"
+        "  Example: 2x^2 - 3x - 2 = 0\n"
+        "    a=2, b=-3, c=-2\n"
+        "    D = 9 + 16 = 25\n"
+        "    x = (3 + 5) / 4 = 2   or   x = (3 - 5) / 4 = -0.5\n";
+    pressEnter();
+}
+
 int main() {
     while (true) {
         clearScreen(); banner();
@@ -87,7 +124,7 @@ int main() {
 
         switch (c) {
         case 1: lesson1(); break;
-        case 2: break;
+        case 2: lesson2(); break;
         case 3: break;
         case 4: break;
         case 5: break;
