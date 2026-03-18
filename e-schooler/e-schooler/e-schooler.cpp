@@ -2,6 +2,8 @@
 #include <string>
 #include "utils.h"
 #include "math_lessons.h"
+#include "math_questions.h"
+#include "math_test.h"
 using namespace std;
 
 int main() {
@@ -36,7 +38,7 @@ int main() {
         case 3: lesson3(); break;
         case 4: exercises(); break;
         case 5: homework(); break;
-        case 6: break;
+        case 6: runTest(); break;
         case 7: break;
         case 0:
             cout << green("\n See you next time!");
