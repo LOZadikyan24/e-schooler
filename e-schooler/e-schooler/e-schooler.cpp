@@ -96,6 +96,117 @@ void lesson2() {
     pressEnter();
 }
 
+void lesson3() {
+    clearScreen(); banner();
+    cout << bold(yellow("\n  === LESSON 3 - Word Problems with Quadratics ===\n\n"));
+    cout <<
+        "  Quadratic equations appear in everyday problems.\n"
+        "  The key steps are always the same:\n"
+        "\n"
+        "    1. Read the problem carefully.\n"
+        "    2. Choose a variable (usually x).\n"
+        "    3. Write an equation.\n"
+        "    4. Solve the equation.\n"
+        "    5. Check the answer makes sense.\n"
+        "\n"
+        "\n"
+        "  EXAMPLE 1 - Area Problem\n"
+        "  -------------------------\n"
+        "  A rectangle has area 24 m^2.\n"
+        "  The length is 2 m more than the width.\n"
+        "  Find the width.\n"
+        "\n"
+        "  Let width = x, then length = x + 2\n"
+        "  Area = x * (x + 2) = 24\n"
+        "  x^2 + 2x - 24 = 0\n"
+        "  (x + 6)(x - 4) = 0\n"
+        "  x = -6 (not valid, width can't be negative)  or  x = 4\n"
+        "  Answer: width = 4 m, length = 6 m\n"
+        "\n"
+        "\n"
+        "  EXAMPLE 2 - Number Problem\n"
+        "  ---------------------------\n"
+        "  A number added to its square equals 12.\n"
+        "  What is the number?\n"
+        "\n"
+        "  x + x^2 = 12\n"
+        "  x^2 + x - 12 = 0\n"
+        "  (x + 4)(x - 3) = 0\n"
+        "  Answer: x = 3  or  x = -4  (both are valid here)\n"
+        "\n";
+    pressEnter();
+}
+
+void exercises() {
+    clearScreen(); banner();
+    cout << bold(yellow("\n  === PRACTICE EXERCISES ===\n\n"));
+    cout <<
+        "  Try to solve these yourself before looking at the answers!\n"
+        "\n"
+        "  EASY\n"
+        "  ----\n"
+        "  1.  x^2 - 4 = 0\n"
+        "  2.  x^2 + 3x = 0\n"
+        "  3.  x^2 - 7x + 12 = 0\n"
+        "  4.  x^2 + 6x + 9 = 0\n"
+        "\n"
+        "  MEDIUM\n"
+        "  ------\n"
+        "  5.  2x^2 - 8 = 0\n"
+        "  6.  x^2 - x - 6 = 0\n"
+        "  7.  3x^2 + 6x = 0\n"
+        "  8.  x^2 - 4x + 4 = 0\n"
+        "\n"
+        "  HARDER\n"
+        "  ------\n"
+        "  9.  2x^2 - 5x + 3 = 0\n"
+        "  10. x^2 + 2x - 15 = 0\n"
+        "\n";
+    cout << cyan("  --- ANSWERS ---\n\n");
+    cout <<
+        "  1.  x = 2 or x = -2\n"
+        "  2.  x = 0 or x = -3\n"
+        "  3.  x = 3 or x = 4\n"
+        "  4.  x = -3 (one answer, repeated)\n"
+        "  5.  x = 2 or x = -2\n"
+        "  6.  x = 3 or x = -2\n"
+        "  7.  x = 0 or x = -2\n"
+        "  8.  x = 2 (one answer, repeated)\n"
+        "  9.  x = 1 or x = 1.5\n"
+        "  10. x = 3 or x = -5\n";
+    pressEnter();
+}
+
+void homework() {
+    clearScreen(); banner();
+    cout << bold(yellow("\n  === HOMEWORK ===\n\n"));
+    cout <<
+        "  Show all your working. Due next class.\n"
+        "\n"
+        "  PART A - Solve the equations  (2 points each)\n"
+        "  -----------------------------------------------\n"
+        "  1.  x^2 - 25 = 0\n"
+        "  2.  x^2 + 5x + 6 = 0\n"
+        "  3.  x^2 - 8x + 16 = 0\n"
+        "  4.  2x^2 + 4x = 0\n"
+        "  5.  x^2 - 3x - 10 = 0\n"
+        "\n"
+        "  PART B - Word problems  (4 points each)\n"
+        "  -----------------------------------------\n"
+        "  6.  Two numbers differ by 3. Their product is 28.\n"
+        "      Find both numbers.\n"
+        "\n"
+        "  7.  A square garden has its side increased by 2 m.\n"
+        "      The new area is 25 m^2.\n"
+        "      What was the original side length?\n"
+        "\n"
+        "  8.  The sum of a number and its square is 20.\n"
+        "      Find the number.\n"
+        "\n"
+        "  TOTAL: 26 points. Pass = 13 points (50%)\n";
+    pressEnter();
+}
+
 int main() {
     while (true) {
         clearScreen(); banner();
@@ -125,9 +236,9 @@ int main() {
         switch (c) {
         case 1: lesson1(); break;
         case 2: lesson2(); break;
-        case 3: break;
-        case 4: break;
-        case 5: break;
+        case 3: lesson3(); break;
+        case 4: exercises(); break;
+        case 5: homework(); break;
         case 6: break;
         case 7: break;
         case 0:

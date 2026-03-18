@@ -1,7 +1,0 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="e-schooler/e-schooler.vcxproj" Id="ac3b3c8d-736f-42c6-9b5f-a776f7426644" />
-</Solution>
