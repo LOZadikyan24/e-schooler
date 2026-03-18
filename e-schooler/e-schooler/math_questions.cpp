@@ -1,9 +1,8 @@
 #include <iostream>
-#include "math_questions.h"
 using namespace std;
 
-const int totalQ = 31;
-const int testQ = 20;
+extern const int totalQ = 31;
+extern const int testQ = 20;
 
 int qCat[totalQ];
 string qText[totalQ];

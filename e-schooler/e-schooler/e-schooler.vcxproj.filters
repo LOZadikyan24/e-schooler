@@ -33,6 +33,12 @@
     <ClCompile Include="prog_lessons.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="prog_questions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="prog_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utils.h">
@@ -48,6 +54,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="prog_lessons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prog_questions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prog_test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

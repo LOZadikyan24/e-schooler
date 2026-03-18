@@ -2,6 +2,7 @@
 #include <random>
 #include <ctime>
 #include <iomanip>
+#include <algorithm>
 #include "utils.h"
 #include "math_questions.h"
 using namespace std;

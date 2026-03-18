@@ -5,6 +5,8 @@
 #include "math_questions.h"
 #include "math_test.h"
 #include "prog_lessons.h"
+#include "prog_questions.h"
+#include "prog_test.h"
 using namespace std;
 
 void mathMenu() {
@@ -73,7 +75,7 @@ void progMenu() {
         case 3: progLesson3(); break;
         case 4: progExercises(); break;
         case 5: progHomework(); break;
-        case 6: break;
+        case 6: runProgTest(); break;
         case 0: return;
         }
     }
