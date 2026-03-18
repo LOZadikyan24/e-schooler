@@ -4,12 +4,15 @@
 #include "math_lessons.h"
 #include "math_questions.h"
 #include "math_test.h"
+#include "prog_lessons.h"
 using namespace std;
 
-int main() {
+void mathMenu() {
     while (true) {
-        clearScreen(); banner();
+        clearScreen(); mathBanner();
         cout <<
+            "  SUBJECT: Mathematics - Quadratic Equations\n"
+            "\n"
             "  LESSONS\n"
             "  -----------------------------------\n"
             "   1.  What is a Quadratic Equation?\n"
@@ -22,11 +25,7 @@ int main() {
             "  -----------------------------------\n"
             "   6.  Take the Test  (20 questions)\n"
             "\n"
-            "  STATS\n"
-            "  -----------------------------------\n"
-            "   7.  Class Statistics\n"
-            "\n"
-            "   0.  Exit\n\n";
+            "   0.  Back to Main Menu\n\n";
 
         int c;
         cout << "  Enter choice: ";
@@ -39,9 +38,70 @@ int main() {
         case 4: exercises(); break;
         case 5: homework(); break;
         case 6: runTest(); break;
-        case 7: break;
+        case 0: return;
+        }
+    }
+}
+
+void progMenu() {
+    while (true) {
+        clearScreen(); progBanner();
+        cout <<
+            "  SUBJECT: Programming - Variables & Data Types\n"
+            "\n"
+            "  LESSONS\n"
+            "  -----------------------------------\n"
+            "   1.  What are Variables?\n"
+            "   2.  Data Types\n"
+            "   3.  Using Variables\n"
+            "   4.  Practice Exercises\n"
+            "   5.  Homework\n"
+            "\n"
+            "  TEST\n"
+            "  -----------------------------------\n"
+            "   6.  Take the Test  (20 questions)\n"
+            "\n"
+            "   0.  Back to Main Menu\n\n";
+
+        int c;
+        cout << "  Enter choice: ";
+        cin >> c;
+
+        switch (c) {
+        case 1: progLesson1(); break;
+        case 2: progLesson2(); break;
+        case 3: progLesson3(); break;
+        case 4: progExercises(); break;
+        case 5: progHomework(); break;
+        case 6: break;
+        case 0: return;
+        }
+    }
+}
+
+int main() {
+    while (true) {
+        clearScreen(); banner();
+        cout <<
+            "  SELECT A SUBJECT\n"
+            "  -----------------------------------\n"
+            "   1.  Mathematics\n"
+            "       Quadratic Equations\n"
+            "\n"
+            "   2.  Programming\n"
+            "       Variables & Data Types\n"
+            "\n"
+            "   0.  Exit\n\n";
+
+        int c;
+        cout << "  Enter choice: ";
+        cin >> c;
+
+        switch (c) {
+        case 1: mathMenu(); break;
+        case 2: progMenu(); break;
         case 0:
-            cout << green("\n See you next time!");
+            cout << green("\n  See you next time!\n");
             return 0;
         }
     }

@@ -19,14 +19,14 @@ void runTest() {
     mt19937 rng(time(0));
     shuffle(index, index + totalQ, rng);
 
-    clearScreen(); banner();
+    clearScreen(); mathBanner();
 
     cout << bold(yellow("\n  === TEST: 20 Random Questions ===\n"));
     cout << "  Answer with A, B, C or D.\n";
     pressEnter();
 
     for (int i = 0; i < testQ; i++) {
-        clearScreen(); banner();
+        clearScreen(); mathBanner();
 
         int q = index[i];
         cout << " Question " << i + 1 << "/20\n" << " " << qText[q] << "\n\n";
@@ -71,7 +71,7 @@ void runTest() {
             pressEnter();
         }
     }
-    clearScreen(); banner();
+    clearScreen(); mathBanner();
     cout << bold(yellow("\n  === RESULT ===\n\n"));
     double percent = (score * 100) / maxScore;
     cout << "  Your score: " << score << " / " << maxScore << "\n";

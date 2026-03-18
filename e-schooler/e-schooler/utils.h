@@ -9,3 +9,5 @@ string red(string text);
 string cyan(string text);
 string bold(string text);
 void banner();
+void mathBanner();
+void progBanner();

@@ -1,7 +1,4 @@
 ﻿  e-schooler.cpp
-  math_questions.cpp
-  math_test.cpp
-C:\Users\poka\Desktop\asldkjsalkdjsad\e-schooler\e-schooler\math_test.cpp(19,21): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   utils.cpp
   Generating Code...
   e-schooler.vcxproj -> C:\Users\poka\Desktop\asldkjsalkdjsad\e-schooler\x64\Debug\e-schooler.exe

@@ -3,7 +3,7 @@
 using namespace std;
 
 void lesson1() {
-    clearScreen(); banner();
+    clearScreen(); mathBanner();
     cout << bold(yellow("\n  === LESSON 1 - What is a Quadratic Equation? ===\n\n"));
     cout <<
         "  A quadratic equation looks like this:\n"
@@ -32,7 +32,7 @@ void lesson1() {
 }
 
 void lesson2() {
-    clearScreen(); banner();
+    clearScreen(); mathBanner();
     cout << bold(yellow("\n  === LESSON 2 - How to Solve Quadratic Equations ===\n\n"));
     cout <<
         "  METHOD 1: Factoring\n"
@@ -68,7 +68,7 @@ void lesson2() {
 }
 
 void lesson3() {
-    clearScreen(); banner();
+    clearScreen(); mathBanner();
     cout << bold(yellow("\n  === LESSON 3 - Word Problems with Quadratics ===\n\n"));
     cout <<
         "  Quadratic equations appear in everyday problems.\n"
@@ -109,7 +109,7 @@ void lesson3() {
 }
 
 void exercises() {
-    clearScreen(); banner();
+    clearScreen(); mathBanner();
     cout << bold(yellow("\n  === PRACTICE EXERCISES ===\n\n"));
     cout <<
         "  Try to solve these yourself before looking at the answers!\n"
@@ -149,7 +149,7 @@ void exercises() {
 }
 
 void homework() {
-    clearScreen(); banner();
+    clearScreen(); mathBanner();
     cout << bold(yellow("\n  === HOMEWORK ===\n\n"));
     cout <<
         "  Show all your working. Due next class.\n"
