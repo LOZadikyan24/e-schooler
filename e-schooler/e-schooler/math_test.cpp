@@ -7,9 +7,12 @@
 #include "math_questions.h"
 using namespace std;
 
-
 void runTest() {
-    loadQuestions();
+    Question test[31];
+    loadQuestions(test);
+
+    int totalQ = 31;
+    int testQ = 20;
     double score = 0;
     double maxScore = 0;
 
@@ -29,11 +32,11 @@ void runTest() {
     for (int i = 0; i < testQ; i++) {
         clearScreen(); mathBanner();
 
-        int q = index[i];
-        cout << " Question " << i + 1 << "/20\n" << " " << qText[q] << "\n\n";
+        int y = index[i];
+        cout << " Question " << i + 1 << "/20\n" << " " << test[y].text << "\n\n";
         char labels[4] = { 'A', 'B', 'C', 'D' };
-        for (int y = 0; y < 4; y++) {
-            cout << "  " << labels[y] << ") " << qOpt[q][y] << "\n";
+        for (int z = 0; z < 4; z++) {
+            cout << "  " << labels[z] << ") " << test[y].options[z] << "\n";
         }
         char answer;
         while (true) {
@@ -50,25 +53,25 @@ void runTest() {
             }
         }
 
-        if (qCat[q] == 0) maxScore += 1;
-        else if (qCat[q] == 1) maxScore += 2;
-        else if (qCat[q] == 2) maxScore += 3;
+        if (test[y].category == 0) maxScore += 1;
+        else if (test[y].category == 1) maxScore += 2;
+        else if (test[y].category == 2) maxScore += 3;
 
-        if (answer - 'A' == qAns[q]) {
+        if (answer - 'A' == test[y].answer) {
             cout << green("\n  CORRECT!\n");
-            if (qCat[q] == 0) {
+            if (test[y].category == 0) {
                 score += 1;
             }
-            else if (qCat[q] == 1) {
+            else if (test[y].category == 1) {
                 score += 2;
             }
-            else if (qCat[q] == 2) {
+            else if (test[y].category == 2) {
                 score += 3;
             }
             pressEnter();
         }
         else {
-            cout << red("\n  WRONG. ") << qExp[q] << "\n";
+            cout << red("\n  WRONG. ") << test[y].explanation << "\n";
             pressEnter();
         }
     }

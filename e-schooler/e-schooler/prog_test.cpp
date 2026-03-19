@@ -8,16 +8,20 @@
 using namespace std;
 
 void runProgTest() {
-    loadProgQuestions();
+    ProgQuestion pq[32];
+    loadProgQuestions(pq);
+
+    int totalQ = 32;
+	int testQ = 20;
     double score = 0;
     double maxScore = 0;
 
-    int index[31];
-    for (int i = 0; i < progTotalQ; i++) {
+    int index[32];
+    for (int i = 0; i < totalQ; i++) {
         index[i] = i;
     }
     mt19937 rng(time(0));
-    shuffle(index, index + progTotalQ, rng);
+    shuffle(index, index + totalQ, rng);
 
     clearScreen(); progBanner();
 
@@ -25,14 +29,14 @@ void runProgTest() {
     cout << "  Answer with A, B, C or D.\n";
     pressEnter();
 
-    for (int i = 0; i < progTestQ; i++) {
+    for (int i = 0; i < testQ; i++) {
         clearScreen(); progBanner();
 
-        int q = index[i];
-        cout << " Question " << i + 1 << "/20\n" << " " << pqText[q] << "\n\n";
+		int y = index[i];
+        cout << " Question " << i + 1 << "/20\n" << " " << pq[y].text << "\n\n";
         char labels[4] = { 'A', 'B', 'C', 'D' };
-        for (int y = 0; y < 4; y++) {
-            cout << "  " << labels[y] << ") " << pqOpt[q][y] << "\n";
+        for (int z = 0; z < 4; z++) {
+            cout << "  " << labels[z] << ") " << pq[y].options[z] << "\n";
         }
         char answer;
         while (true) {
@@ -43,19 +47,19 @@ void runProgTest() {
             else cout << red("  Please enter A, B, C or D.\n");
         }
 
-        if (pqCat[q] == 0) maxScore += 1;
-        else if (pqCat[q] == 1) maxScore += 2;
-        else if (pqCat[q] == 2) maxScore += 3;
+        if (pq[y].category == 0) maxScore += 1;
+        else if (pq[y].category == 1) maxScore += 2;
+        else if (pq[y].category == 2) maxScore += 3;
 
-        if (answer - 'A' == pqAns[q]) {
+        if (answer - 'A' == pq[y].answer) {
             cout << green("\n  CORRECT!\n");
-            if (pqCat[q] == 0) score += 1;
-            else if (pqCat[q] == 1) score += 2;
-            else if (pqCat[q] == 2) score += 3;
+            if (pq[y].category == 0) score += 1;
+            else if (pq[y].category == 1) score += 2;
+            else if (pq[y].category == 2) score += 3;
             pressEnter();
         }
         else {
-            cout << red("\n  WRONG. ") << pqExp[q] << "\n";
+            cout << red("\n  WRONG. ") << pq[y].explanation << "\n";
             pressEnter();
         }
     }

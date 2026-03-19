@@ -3,13 +3,12 @@
 #include <string>
 using namespace std;
 
-extern const int totalQ;
-extern const int testQ;
+struct Question {
+    int category = 0;
+    string text;
+    string options[4];
+    int answer = 0;
+    string explanation;
+};
 
-extern int qCat[];
-extern string qText[];
-extern string qOpt[][4];
-extern int qAns[];
-extern string qExp[];
-
-void loadQuestions();
+void loadQuestions(Question q[]);
