@@ -11,7 +11,7 @@ void clearScreen() {
 
 void pressEnter() {
     cout << "\n  Press ENTER to continue...";
-    cin.ignore();
+    cin.ignore(1000, '\n');
     cin.get();
 }
 

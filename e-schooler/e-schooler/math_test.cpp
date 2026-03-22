@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <random>
 #include <ctime>
 #include <iomanip>
@@ -8,9 +9,8 @@
 using namespace std;
 
 void runTest() {
-    Question test[31];
+    Question test[50];
     loadQuestions(test);
-
     int totalQ = 31;
     int testQ = 20;
     double score = 0;
@@ -37,9 +37,21 @@ void runTest() {
     shuffle(index, index + 20, rng);
 
     clearScreen(); mathBanner();
+    string studentName;
+    cout << "\n  Enter your name: ";
+    cin.ignore(1000, '\n');
+    getline(cin, studentName);
+    while (studentName.empty()) {
+        cout << red("  Please enter a name: ");
+        getline(cin, studentName);
+    }
+
+    clearScreen(); mathBanner();
     cout << bold(yellow("\n  === TEST: 20 Random Questions ===\n"));
     cout << "  Answer with A, B, C or D.\n";
-    pressEnter();
+    cout << "\n  Press ENTER to continue...";
+    cin.ignore(1000, '\n');
+
 
     for (int i = 0; i < testQ; i++) {
         clearScreen(); mathBanner();
@@ -54,6 +66,7 @@ void runTest() {
         while (true) {
             cout << "\n  Your answer: ";
             cin >> answer;
+            cin.ignore(1000, '\n');
             if (answer >= 'a' && answer <= 'd') {
                 answer -= 32;
             }
@@ -80,34 +93,50 @@ void runTest() {
             else if (test[y].category == 2) {
                 score += 3;
             }
-            pressEnter();
+            cout << "\n  Press ENTER to continue...";
+            cin.ignore(1000, '\n');
         }
         else {
             cout << red("\n  WRONG. ") << test[y].explanation << "\n";
-            pressEnter();
+            cout << "\n  Press ENTER to continue...";
+            cin.ignore(1000, '\n');
         }
     }
     clearScreen(); mathBanner();
     cout << bold(yellow("\n  === RESULT ===\n\n"));
-    double percent = (score * 100) / maxScore;
-    cout << "  Your score: " << score << " / " << maxScore << "\n";
+    double percent = (score * 100.0) / maxScore;
+
+    string grade;
+    if (percent >= 88) grade = "6";
+    else if (percent >= 63) grade = "5";
+    else if (percent >= 38) grade = "4";
+    else if (percent >= 25) grade = "3";
+    else grade = "2";
+
+    cout << "  Student: " << studentName << "\n";
+    cout << "  Score:   " << score << " / " << maxScore << "\n";
     cout << "  Percent: " << fixed << setprecision(2) << percent << "%\n";
 
-    if (percent >= 88) {
-        cout << green("  Grade: A\n");
-    }
-    else if (percent >= 63) {
-        cout << yellow("  Grade: B\n");
-    }
-    else if (percent >= 38) {
-        cout << cyan("  Grade: C\n");
-    }
-    else if (percent >= 25) {
-        cout << cyan("  Grade: D\n");
+    if (grade == "6") cout << green("  Grade: 6\n");
+    else if (grade == "5") cout << yellow("  Grade: 5\n");
+    else if (grade == "4") cout << cyan("  Grade: 4\n");
+    else if (grade == "3") cout << cyan("  Grade: 3\n");
+    else cout << red("  Grade: 2\n");
+
+    ofstream outFile("math_results.txt", ios::app);
+    if (outFile.is_open()) {
+        outFile << studentName << ","
+            << score << ","
+            << maxScore << ","
+            << fixed << setprecision(2) << percent << ","
+            << grade << "\n";
+        outFile.close();
+        cout << green("\n  Result saved to math_results.txt\n");
     }
     else {
-        cout << red("  Grade: F\n");
+        cout << red("\n  Could not save result.\n");
     }
-    cout << "\n Press ENTER to continue...";
-    cin.ignore();
+
+    cout << "\n  Press ENTER to continue...";
+    cin.ignore(1000, '\n');
 }

@@ -3,6 +3,7 @@
 #include <ctime>
 #include <iomanip>
 #include <algorithm>
+#include <fstream>
 #include "utils.h"
 #include "prog_questions.h"
 using namespace std;
@@ -37,10 +38,20 @@ void runProgTest() {
     shuffle(index, index + 20, rng);
 
     clearScreen(); progBanner();
+    string studentName;
+    cout << "\n  Enter your name: ";
+    cin.ignore(1000, '\n');
+    getline(cin, studentName);
+    while (studentName.empty()) {
+        cout << red("  Please enter a name: ");
+        getline(cin, studentName);
+    }
 
+    clearScreen(); progBanner();
     cout << bold(yellow("\n  === TEST: 20 Random Questions ===\n"));
     cout << "  Answer with A, B, C or D.\n";
-    pressEnter();
+    cout << "\n  Press ENTER to continue...";
+    cin.ignore(1000, '\n');
 
     for (int i = 0; i < testQ; i++) {
         clearScreen(); progBanner();
@@ -55,6 +66,7 @@ void runProgTest() {
         while (true) {
             cout << "\n  Your answer: ";
             cin >> answer;
+            cin.ignore(1000, '\n');
             if (answer >= 'a' && answer <= 'd') answer -= 32;
             if (answer >= 'A' && answer <= 'D') break;
             else cout << red("  Please enter A, B, C or D.\n");
@@ -69,26 +81,51 @@ void runProgTest() {
             if (test[y].category == 0) score += 1;
             else if (test[y].category == 1) score += 2;
             else if (test[y].category == 2) score += 3;
-            pressEnter();
+            cout << "\n  Press ENTER to continue...";
+            cin.ignore(1000, '\n');
         }
         else {
             cout << red("\n  WRONG. ") << test[y].explanation << "\n";
-            pressEnter();
+            cout << "\n  Press ENTER to continue...";
+            cin.ignore(1000, '\n');
         }
     }
 
     clearScreen(); progBanner();
     cout << bold(yellow("\n  === RESULT ===\n\n"));
-    double percent = (score * 100) / maxScore;
-    cout << "  Your score: " << score << " / " << maxScore << "\n";
+    double percent = (score * 100.0) / maxScore;
+
+    string grade;
+    if (percent >= 92) grade = "6";
+    else if (percent >= 75) grade = "5";
+    else if (percent >= 59) grade = "4";
+    else if (percent >= 50) grade = "3";
+    else grade = "2";
+
+    cout << "  Student: " << studentName << "\n";
+    cout << "  Score:   " << score << " / " << maxScore << "\n";
     cout << "  Percent: " << fixed << setprecision(2) << percent << "%\n";
 
-    if (percent >= 88) cout << green("  Grade: A\n");
-    else if (percent >= 63) cout << yellow("  Grade: B\n");
-    else if (percent >= 38) cout << cyan("  Grade: C\n");
-    else if (percent >= 25) cout << cyan("  Grade: D\n");
-    else                    cout << red("  Grade: F\n");
+    if (grade == "6") cout << green("  Grade: 6\n");
+    else if (grade == "5") cout << yellow("  Grade: 5\n");
+    else if (grade == "4") cout << cyan("  Grade: 4\n");
+    else if (grade == "3") cout << cyan("  Grade: 3\n");
+    else                   cout << red("  Grade: 2\n");
 
-    cout << "\n Press ENTER to continue...";
-    cin.ignore();
+    ofstream outFile("prog_results.txt", ios::app);
+    if (outFile.is_open()) {
+        outFile << studentName << ","
+            << score << ","
+            << maxScore << ","
+            << fixed << setprecision(2) << percent << ","
+            << grade << "\n";
+        outFile.close();
+        cout << green("\n  Result saved to prog_results.txt\n");
+    }
+    else {
+        cout << red("\n  Could not save result.\n");
+    }
+
+    cout << "\n  Press ENTER to continue...";
+    cin.ignore(1000, '\n');
 }

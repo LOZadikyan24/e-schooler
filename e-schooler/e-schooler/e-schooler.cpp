@@ -7,6 +7,7 @@
 #include "prog_lessons.h"
 #include "prog_questions.h"
 #include "prog_test.h"
+#include "stats.h"
 using namespace std;
 
 void mathMenu() {
@@ -27,6 +28,10 @@ void mathMenu() {
             "  -----------------------------------\n"
             "   6.  Take the Test  (20 questions)\n"
             "\n"
+            "  STATISTICS\n"
+            "  -----------------------------------\n"
+            "   7.  View Statistics\n"
+            "\n"
             "   0.  Back to Main Menu\n\n";
 
         int choice;
@@ -43,6 +48,7 @@ void mathMenu() {
             case 4: exercises(); break;
             case 5: homework(); break;
             case 6: runTest(); break;
+            case 7: showMathStats(); break;
             case 0: return;
             }
         }
@@ -67,6 +73,10 @@ void progMenu() {
             "  -----------------------------------\n"
             "   6.  Take the Test  (20 questions)\n"
             "\n"
+            "  STATISTICS\n"
+            "  -----------------------------------\n"
+            "   7.  View Statistics\n"
+            "\n"
             "   0.  Back to Main Menu\n\n";
 
         int choice;
@@ -83,6 +93,7 @@ void progMenu() {
             case 4: progExercises(); break;
             case 5: progHomework(); break;
             case 6: runProgTest(); break;
+            case 7: showProgStats(); break;
             case 0: return;
             }
         }
