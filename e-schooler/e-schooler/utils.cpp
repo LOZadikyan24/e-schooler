@@ -24,7 +24,7 @@ string bold(string text) { return "\033[1m" + text + "\033[0m"; }
 void banner() {
     cout << bold(cyan(
         "\n  +------------------------------------------------------+\n"
-        "  |                    E-SCHOOL                         |\n"
+        "  |                  E-SCHOOLER                         |\n"
         "  |                    Grade 9                          |\n"
         "  +------------------------------------------------------+\n"
     )) << "\n";
@@ -33,7 +33,7 @@ void banner() {
 void mathBanner() {
     cout << bold(cyan(
         "\n  +------------------------------------------------------+\n"
-        "  |        E-SCHOOL: QUADRATIC EQUATIONS                |\n"
+        "  |      E-SCHOOLER: QUADRATIC EQUATIONS                |\n"
         "  |             Mathematics - Grade 9                   |\n"
         "  +------------------------------------------------------+\n"
     )) << "\n";
@@ -42,7 +42,7 @@ void mathBanner() {
 void progBanner() {
     cout << bold(cyan(
         "\n  +------------------------------------------------------+\n"
-        "  |          E-SCHOOL: VARIABLES & DATA TYPES           |\n"
+        "  |        E-SCHOOLER: VARIABLES & DATA TYPES           |\n"
         "  |             Programming - Grade 9                   |\n"
         "  +------------------------------------------------------+\n"
     )) << "\n";

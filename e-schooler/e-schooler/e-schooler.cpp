@@ -29,18 +29,22 @@ void mathMenu() {
             "\n"
             "   0.  Back to Main Menu\n\n";
 
-        int c;
+        int choice;
         cout << "  Enter choice: ";
-        cin >> c;
-
-        switch (c) {
-        case 1: lesson1(); break;
-        case 2: lesson2(); break;
-        case 3: lesson3(); break;
-        case 4: exercises(); break;
-        case 5: homework(); break;
-        case 6: runTest(); break;
-        case 0: return;
+        if (!(cin >> choice)) {
+            cin.clear();
+            cin.ignore();
+        }
+        else {
+            switch (choice) {
+            case 1: lesson1(); break;
+            case 2: lesson2(); break;
+            case 3: lesson3(); break;
+            case 4: exercises(); break;
+            case 5: homework(); break;
+            case 6: runTest(); break;
+            case 0: return;
+            }
         }
     }
 }
@@ -65,18 +69,22 @@ void progMenu() {
             "\n"
             "   0.  Back to Main Menu\n\n";
 
-        int c;
+        int choice;
         cout << "  Enter choice: ";
-        cin >> c;
-
-        switch (c) {
-        case 1: progLesson1(); break;
-        case 2: progLesson2(); break;
-        case 3: progLesson3(); break;
-        case 4: progExercises(); break;
-        case 5: progHomework(); break;
-        case 6: runProgTest(); break;
-        case 0: return;
+        if (!(cin >> choice)) {
+            cin.clear();
+            cin.ignore();
+        }
+        else {
+            switch (choice) {
+            case 1: progLesson1(); break;
+            case 2: progLesson2(); break;
+            case 3: progLesson3(); break;
+            case 4: progExercises(); break;
+            case 5: progHomework(); break;
+            case 6: runProgTest(); break;
+            case 0: return;
+            }
         }
     }
 }
@@ -95,16 +103,20 @@ int main() {
             "\n"
             "   0.  Exit\n\n";
 
-        int c;
+        int choice;
         cout << "  Enter choice: ";
-        cin >> c;
-
-        switch (c) {
-        case 1: mathMenu(); break;
-        case 2: progMenu(); break;
-        case 0:
-            cout << green("\n  See you next time!\n");
-            return 0;
+        if (!(cin >> choice)) {
+            cin.clear();
+            cin.ignore();
+        }
+        else {
+            switch (choice) {
+            case 1: mathMenu(); break;
+            case 2: progMenu(); break;
+            case 0:
+                cout << green("\n  See you next time!\n");
+                return 0;
+            }
         }
     }
 }

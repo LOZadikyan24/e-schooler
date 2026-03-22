@@ -16,15 +16,27 @@ void runTest() {
     double score = 0;
     double maxScore = 0;
 
-    int index[31];
+    int theory[12], basic[11], applied[8];
+    int tCount = 0, bCount = 0, aCount = 0;
     for (int i = 0; i < totalQ; i++) {
-        index[i] = i;
+        if (test[i].category == 0) theory[tCount++] = i;
+        else if (test[i].category == 1) basic[bCount++] = i;
+        else if (test[i].category == 2) applied[aCount++] = i;
     }
     mt19937 rng(time(0));
-    shuffle(index, index + totalQ, rng);
+    shuffle(theory, theory + tCount, rng);
+    shuffle(basic, basic + bCount, rng);
+    shuffle(applied, applied + aCount, rng);
+
+    int index[20];
+    for (int i = 0; i < 8; i++) {
+        index[i] = theory[i];
+    }
+    for (int i = 0; i < 7; i++) index[8 + i] = basic[i];
+    for (int i = 0; i < 5; i++) index[15 + i] = applied[i];
+    shuffle(index, index + 20, rng);
 
     clearScreen(); mathBanner();
-
     cout << bold(yellow("\n  === TEST: 20 Random Questions ===\n"));
     cout << "  Answer with A, B, C or D.\n";
     pressEnter();

@@ -36,7 +36,7 @@ void loadProgQuestions(ProgQuestion q[]) {
 
     q[i].category = 0; q[i].text = "What are the only two values a bool can hold?";
     q[i].options[0] = "yes and no"; q[i].options[1] = "true and false";
-    q[i].options[2] = "0 and 1"; q[i].options[3] = "on and off";
+    q[i].options[2] = "1 and 2"; q[i].options[3] = "on and off";
     q[i].answer = 1; q[i].explanation = "bool holds true or false."; i++;
 
     q[i].category = 0; q[i].text = "Which quotes are used for a char value?";
@@ -113,13 +113,8 @@ void loadProgQuestions(ProgQuestion q[]) {
 
     q[i].category = 1; q[i].text = "int a = 5; double b = a; What is b?";
     q[i].options[0] = "Error"; q[i].options[1] = "0";
-    q[i].options[2] = "5"; q[i].options[3] = "5.0";
+    q[i].options[2] = "0.5"; q[i].options[3] = "5.0";
     q[i].answer = 3; q[i].explanation = "int 5 converts to double 5.0 automatically."; i++;
-
-    q[i].category = 1; q[i].text = "Can you store 3.5 in an int variable?";
-    q[i].options[0] = "Yes, it stays 3.5"; q[i].options[1] = "No, it causes a crash";
-    q[i].options[2] = "No, the decimal is lost: stored as 3"; q[i].options[3] = "Yes, it becomes 4";
-    q[i].answer = 2; q[i].explanation = "int truncates decimals: 3.5 becomes 3."; i++;
 
     q[i].category = 1; q[i].text = "What is the value of x?  int x = 10 / 3;";
     q[i].options[0] = "3"; q[i].options[1] = "Error";

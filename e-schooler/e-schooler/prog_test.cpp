@@ -8,20 +8,33 @@
 using namespace std;
 
 void runProgTest() {
-    ProgQuestion pq[32];
-    loadProgQuestions(pq);
+    ProgQuestion test[32];
+    loadProgQuestions(test);
 
     int totalQ = 32;
-	int testQ = 20;
+    int testQ = 20;
     double score = 0;
     double maxScore = 0;
 
-    int index[32];
+    int theory[12], basic[11], applied[9];
+    int tCount = 0, bCount = 0, aCount = 0;
     for (int i = 0; i < totalQ; i++) {
-        index[i] = i;
+        if (test[i].category == 0) theory[tCount++] = i;
+        else if (test[i].category == 1) basic[bCount++] = i;
+        else if (test[i].category == 2) applied[aCount++] = i;
     }
     mt19937 rng(time(0));
-    shuffle(index, index + totalQ, rng);
+    shuffle(theory, theory + tCount, rng);
+    shuffle(basic, basic + bCount, rng);
+    shuffle(applied, applied + aCount, rng);
+
+    int index[20];
+    for (int i = 0; i < 8; i++) {
+        index[i] = theory[i];
+    }
+    for (int i = 0; i < 7; i++) index[8 + i] = basic[i];
+    for (int i = 0; i < 5; i++) index[15 + i] = applied[i];
+    shuffle(index, index + 20, rng);
 
     clearScreen(); progBanner();
 
@@ -32,11 +45,11 @@ void runProgTest() {
     for (int i = 0; i < testQ; i++) {
         clearScreen(); progBanner();
 
-		int y = index[i];
-        cout << " Question " << i + 1 << "/20\n" << " " << pq[y].text << "\n\n";
+        int y = index[i];
+        cout << " Question " << i + 1 << "/20\n" << " " << test[y].text << "\n\n";
         char labels[4] = { 'A', 'B', 'C', 'D' };
         for (int z = 0; z < 4; z++) {
-            cout << "  " << labels[z] << ") " << pq[y].options[z] << "\n";
+            cout << "  " << labels[z] << ") " << test[y].options[z] << "\n";
         }
         char answer;
         while (true) {
@@ -47,19 +60,19 @@ void runProgTest() {
             else cout << red("  Please enter A, B, C or D.\n");
         }
 
-        if (pq[y].category == 0) maxScore += 1;
-        else if (pq[y].category == 1) maxScore += 2;
-        else if (pq[y].category == 2) maxScore += 3;
+        if (test[y].category == 0) maxScore += 1;
+        else if (test[y].category == 1) maxScore += 2;
+        else if (test[y].category == 2) maxScore += 3;
 
-        if (answer - 'A' == pq[y].answer) {
+        if (answer - 'A' == test[y].answer) {
             cout << green("\n  CORRECT!\n");
-            if (pq[y].category == 0) score += 1;
-            else if (pq[y].category == 1) score += 2;
-            else if (pq[y].category == 2) score += 3;
+            if (test[y].category == 0) score += 1;
+            else if (test[y].category == 1) score += 2;
+            else if (test[y].category == 2) score += 3;
             pressEnter();
         }
         else {
-            cout << red("\n  WRONG. ") << pq[y].explanation << "\n";
+            cout << red("\n  WRONG. ") << test[y].explanation << "\n";
             pressEnter();
         }
     }
