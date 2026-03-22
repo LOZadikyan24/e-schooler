@@ -1,4 +1,14 @@
 ﻿  e-schooler.cpp
   math_lessons.cpp
+  math_questions.cpp
+  math_test.cpp
+C:\Users\poka\Desktop\project\e-schooler\e-schooler\math_test.cpp(26,21): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  prog_lessons.cpp
+  prog_questions.cpp
+  prog_test.cpp
+C:\Users\poka\Desktop\project\e-schooler\e-schooler\prog_test.cpp(27,21): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  utils.cpp
   Generating Code...
-  e-schooler.vcxproj -> C:\Users\poka\Desktop\project\e-schooler\x64\Debug\e-schooler.exe
+e-schooler.obj : error LNK2019: unresolved external symbol "void __cdecl showMathStats(void)" (?showMathStats@@YAXXZ) referenced in function "void __cdecl mathMenu(void)" (?mathMenu@@YAXXZ)
+e-schooler.obj : error LNK2019: unresolved external symbol "void __cdecl showProgStats(void)" (?showProgStats@@YAXXZ) referenced in function "void __cdecl progMenu(void)" (?progMenu@@YAXXZ)
+C:\Users\poka\Desktop\project\e-schooler\x64\Debug\e-schooler.exe : fatal error LNK1120: 2 unresolved externals
