@@ -8,6 +8,7 @@
 #include "prog_questions.h"
 using namespace std;
 
+// Runs the 20‑question programming test
 void runProgTest() {
     ProgQuestion test[32];
     loadProgQuestions(test);
@@ -17,6 +18,7 @@ void runProgTest() {
     double score = 0;
     double maxScore = 0;
 
+    // Separate questions by category
     int theory[12], basic[11], applied[9];
     int tCount = 0, bCount = 0, aCount = 0;
     for (int i = 0; i < totalQ; i++) {
@@ -37,6 +39,7 @@ void runProgTest() {
     for (int i = 0; i < 5; i++) index[15 + i] = applied[i];
     shuffle(index, index + 20, rng);
 
+    // Get student name
     clearScreen(); progBanner();
     string studentName;
     cout << "\n  Enter your name: ";
@@ -53,6 +56,7 @@ void runProgTest() {
     cout << "\n  Press ENTER to continue...";
     cin.ignore(1000, '\n');
 
+    // Question loop
     for (int i = 0; i < testQ; i++) {
         clearScreen(); progBanner();
 
@@ -91,6 +95,7 @@ void runProgTest() {
         }
     }
 
+    // Final results
     clearScreen(); progBanner();
     cout << bold(yellow("\n  === RESULT ===\n\n"));
     double percent = (score * 100.0) / maxScore;
