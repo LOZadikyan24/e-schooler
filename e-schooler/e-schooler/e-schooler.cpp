@@ -10,6 +10,7 @@
 #include "stats.h"
 using namespace std;
 
+// Math subject menu
 void mathMenu() {
     while (true) {
         clearScreen(); mathBanner();
@@ -36,6 +37,8 @@ void mathMenu() {
 
         int choice;
         cout << "  Enter choice: ";
+
+        // Basic input validation
         if (!(cin >> choice)) {
             cin.clear();
             cin.ignore();
@@ -55,6 +58,7 @@ void mathMenu() {
     }
 }
 
+// Programming subject menu
 void progMenu() {
     while (true) {
         clearScreen(); progBanner();
@@ -121,6 +125,7 @@ int main() {
             cin.ignore();
         }
         else {
+            // Navigate to selected subject
             switch (choice) {
             case 1: mathMenu(); break;
             case 2: progMenu(); break;
