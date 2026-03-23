@@ -8,6 +8,7 @@
 #include "math_questions.h"
 using namespace std;
 
+// Runs the 20‑question math test
 void runTest() {
     Question test[50];
     loadQuestions(test);
@@ -28,6 +29,7 @@ void runTest() {
     shuffle(basic, basic + bCount, rng);
     shuffle(applied, applied + aCount, rng);
 
+    // Pick 8 theory, 7 basic, 5 applied
     int index[20];
     for (int i = 0; i < 8; i++) {
         index[i] = theory[i];
@@ -46,6 +48,7 @@ void runTest() {
         getline(cin, studentName);
     }
 
+    // Start test
     clearScreen(); mathBanner();
     cout << bold(yellow("\n  === TEST: 20 Random Questions ===\n"));
     cout << "  Answer with A, B, C or D.\n";
@@ -106,6 +109,7 @@ void runTest() {
     cout << bold(yellow("\n  === RESULT ===\n\n"));
     double percent = (score * 100.0) / maxScore;
 
+    // Grade calculation
     string grade;
     if (percent >= 88) grade = "6";
     else if (percent >= 63) grade = "5";
