@@ -33,8 +33,8 @@ It provides structured content, practical exercises, and automatically generated
 
 ## 📖 Documentation
 
-- 📄 **Project Documentation:** `e-schooler/docs/Documentation.docx`  
-- 📊 **Presentation:** `e-schooler/docs/Presentation.pptx`  
+- 📄 **Project Documentation:** `e-schooler_Documentation.docx`  
+- 📊 **Presentation:** `e-schooler_Presentation.pptx`  
 
 ---
 
@@ -91,7 +91,7 @@ It provides structured content, practical exercises, and automatically generated
   </tr>
   <tr align="center">
     <td><strong>Yanko Yanakiev</strong></td>
-    <td><strong>Back-end Developerr</strong></td>
+    <td><strong>Back-end Developer</strong></td>
     <td>9V</td>
   </tr>
 </table>
