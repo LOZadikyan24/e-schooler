@@ -2,6 +2,7 @@
 #include "utils.h"
 using namespace std;
 
+// Intro to quadratic equations and discriminant
 void lesson1() {
     clearScreen(); mathBanner();
     cout << bold(yellow("\n  === LESSON 1 - What is a Quadratic Equation? ===\n\n"));
@@ -31,6 +32,7 @@ void lesson1() {
     pressEnter();
 }
 
+// Methods for solving quadratic equations
 void lesson2() {
     clearScreen(); mathBanner();
     cout << bold(yellow("\n  === LESSON 2 - How to Solve Quadratic Equations ===\n\n"));
@@ -67,6 +69,7 @@ void lesson2() {
     pressEnter();
 }
 
+// Word problems using quadratics
 void lesson3() {
     clearScreen(); mathBanner();
     cout << bold(yellow("\n  === LESSON 3 - Word Problems with Quadratics ===\n\n"));
@@ -108,6 +111,7 @@ void lesson3() {
     pressEnter();
 }
 
+// Practice exercises with answers
 void exercises() {
     clearScreen(); mathBanner();
     cout << bold(yellow("\n  === PRACTICE EXERCISES ===\n\n"));
@@ -148,6 +152,7 @@ void exercises() {
     pressEnter();
 }
 
+// Homework assignment description
 void homework() {
     clearScreen(); mathBanner();
     cout << bold(yellow("\n  === HOMEWORK ===\n\n"));
