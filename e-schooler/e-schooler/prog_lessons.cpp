@@ -2,6 +2,7 @@
 #include "utils.h"
 using namespace std;
 
+// Intro to variables
 void progLesson1() {
     clearScreen(); progBanner();
     cout << bold(yellow("\n  === LESSON 1 - What are Variables? ===\n\n"));
@@ -30,6 +31,7 @@ void progLesson1() {
     pressEnter();
 }
 
+// Basic data types
 void progLesson2() {
     clearScreen(); progBanner();
     cout << bold(yellow("\n  === LESSON 2 - Data Types ===\n\n"));
@@ -62,6 +64,7 @@ void progLesson2() {
     pressEnter();
 }
 
+// Using variables and input/output
 void progLesson3() {
     clearScreen(); progBanner();
     cout << bold(yellow("\n  === LESSON 3 - Using Variables ===\n\n"));
@@ -102,6 +105,7 @@ void progLesson3() {
     pressEnter();
 }
 
+// Practice exercises with answers
 void progExercises() {
     clearScreen(); progBanner();
     cout << bold(yellow("\n  === PRACTICE EXERCISES ===\n\n"));
@@ -142,6 +146,7 @@ void progExercises() {
     pressEnter();
 }
 
+// Homework sheet
 void progHomework() {
     clearScreen(); progBanner();
     cout << bold(yellow("\n  === HOMEWORK ===\n\n"));
