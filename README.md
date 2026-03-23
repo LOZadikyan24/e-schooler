@@ -33,8 +33,8 @@ It provides structured content, practical exercises, and automatically generated
 
 ## 📖 Documentation
 
-- 📄 **Project Documentation:** `e-schooler_Documentation.docx`  
-- 📊 **Presentation:** `e-schooler_Presentation.pptx`  
+- 📄 **Project Documentation:** `docs/documentation.docx`  
+- 📊 **Presentation:** `docs/presentation.pptx`  
 
 ---
 
